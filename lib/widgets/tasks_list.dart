@@ -5,7 +5,6 @@ class TasksList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      // reverse: true,
       children: [
         TaskTile(),
         TaskTile(),
