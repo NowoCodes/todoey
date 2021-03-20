@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todoey/widgets/tasks_list.dart';
 
 class TasksScreen extends StatelessWidget {
   @override
@@ -6,11 +7,15 @@ class TasksScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
       floatingActionButton: FloatingActionButton(
+        splashColor: Colors.amberAccent,
         backgroundColor: Colors.lightBlueAccent,
         child: Icon(
           Icons.add,
           size: 30.0,
         ),
+        onPressed: () {
+          //
+        },
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,23 +66,7 @@ class TasksScreen extends StatelessWidget {
                   topRight: Radius.circular(20.0),
                 ),
               ),
-              child: ListView(
-                // reverse: true,
-                children: [
-                  ListTile(
-                    title: Text('This is a text'),
-                    trailing: Checkbox(
-                      value: false,
-                    ),
-                  ),
-                  ListTile(
-                    title: Text('This is a text'),
-                    trailing: Checkbox(
-                      value: false,
-                    ),
-                  ),
-                ],
-              ),
+              child: TasksList(),
             ),
           ),
         ],
